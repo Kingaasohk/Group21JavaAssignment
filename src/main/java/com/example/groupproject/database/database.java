@@ -11,4 +11,8 @@ import java.sql.SQLException;
 public class database {
 
     private static final String URL = "jdbc:sqlite:pharmacy_stock.db";
+
+
+
+
 }
