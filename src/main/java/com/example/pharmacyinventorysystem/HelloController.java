@@ -2,13 +2,43 @@ package com.example.pharmacyinventorysystem;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.event.ActionEvent; // ✅ Correct import
+
+import java.io.IOException;
+
+import static com.example.pharmacyinventorysystem.HelloApplication.switchScene;
 
 public class HelloController {
-    @FXML
-    private Label welcomeText;
 
     @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
+    private Label appTitle; // ❗ This should be a field, not a method
+
+    @FXML
+    protected void userLoginButton() {
+        // optional logic here
+    }
+
+    @FXML
+    protected void adminLoginButton() {
+        // optional logic here
+    }
+
+    @FXML
+    public void handleUserLogin(ActionEvent event) throws IOException {
+        switchScene("login-view.fxml");
+    }
+
+    @FXML
+    public void handleAdminLogin(ActionEvent event) throws IOException {
+
+    }
+
+    @FXML
+    public void registerButton() {
+    }
+
+    @FXML
+    public void handleRegister(ActionEvent event) throws IOException {
+
     }
 }
