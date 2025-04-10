@@ -16,7 +16,6 @@ public class RegisterView {
     // UI Components from FXML
     @FXML private TextField firstNameField, lastNameField, emailField;
     @FXML private ChoiceBox<String> genderChoiceBox, roleChoiceBox;
-    @FXML private TextArea addressField;
     @FXML private PasswordField passwordField, confirmPasswordField;
     @FXML private Label successMessage, firstNameError, lastNameError, emailError, genderError, passwordError, confirmPasswordError, roleError;
     @FXML private Button registerButton;
@@ -140,7 +139,8 @@ public class RegisterView {
         firstNameField.clear();
         lastNameField.clear();
         emailField.clear();
-        addressField.clear();
+        genderChoiceBox.setValue(null);
+        roleChoiceBox.setValue(null);
         passwordField.clear();
         confirmPasswordField.clear();
     }

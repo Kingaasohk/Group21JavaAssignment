@@ -26,13 +26,20 @@ public class LoginView {
 
     @FXML
     private void handleLogin() throws IOException {
-        String username = usernameField.getText();
+        String email = usernameField.getText();
         String password = passwordField.getText();
+        String userRole = isValidUser(email, password);
         // Get the user input
-        if (isValidUser(username, password)) {
-            System.out.println("Valid username and password");
-            switchScene("user-homescreen.fxml");
-            // switch to the userscreen if the login is valid
+        if (userRole != null) {
+            if (userRole.equals("Pharmacist")) {
+                System.out.println("Valid username and password");
+                switchScene("user-homescreen.fxml");
+                // switch to the userscreen if the login is valid
+                }
+            else if (userRole.equals("Admin")) {
+                System.out.println("Valid Admin login");
+                switchScene("admin-homescreen.fxml");
+            }
         }else {
             System.out.println("Invalid username or password");
             errorMessage.setText("Password  or E-mail incorrect, try again!");
@@ -43,18 +50,21 @@ public class LoginView {
     }
 
     // function to check data base records to run against user input.
-    private boolean isValidUser(String email, String password) {
-        String sql = "SELECT * FROM users WHERE email = ? AND password = ?";
+    private String isValidUser(String email, String password) {
+        String sql = "SELECT role FROM users WHERE email = ? AND password = ?";
         try( Connection conn = Database.connect();
               PreparedStatement pStatement = conn.prepareStatement(sql)) {
             pStatement.setString(1, email);
             pStatement.setString(2, password);
             ResultSet rs = pStatement.executeQuery();
-             return rs.next();
+            if (rs.next()){
+                return rs.getString("role");
+            }
         } catch (SQLException e) {
             System.out.println("Error: " + e.getMessage());
             throw new RuntimeException(e);
         }
+        return null;
     }
 
     @FXML

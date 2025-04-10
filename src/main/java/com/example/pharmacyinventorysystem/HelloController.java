@@ -15,13 +15,8 @@ public class HelloController {
 
     @FXML
     protected void userLoginButton() {
-        // optional logic here
     }
 
-    @FXML
-    protected void adminLoginButton() {
-        // optional logic here
-    }
 
     @FXML
     public void handleUserLogin(ActionEvent event) throws IOException {
@@ -29,13 +24,7 @@ public class HelloController {
     }
 
     @FXML
-    public void handleAdminLogin(ActionEvent event) throws IOException {
-        switchScene("admin-login-view.fxml");
-    }
-
-    @FXML
     public void registerButton() throws IOException {
-        switchScene("register-view");
     }
 
     @FXML
