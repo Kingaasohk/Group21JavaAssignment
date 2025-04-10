@@ -18,7 +18,14 @@
       <TextField fx:id="lastNameField" layoutX="48.0" layoutY="150.0" promptText="Enter your last name" />
       <PasswordField fx:id="passwordField" layoutX="389.0" layoutY="150.0" promptText="Enter your password" />
       <PasswordField fx:id="confirmPasswordField" layoutX="389.0" layoutY="200.0" promptText="Re-type your password to confirm" />
-      <Label layoutX="77.0" layoutY="82.0" prefHeight="17.0" prefWidth="92.0" text="Label" />
+      <Label fx:id="firstNameError" layoutX="77.0" layoutY="82.0" prefHeight="17.0" prefWidth="92.0" textFill="RED" />
       <ChoiceBox fx:id="roleChoiceBox" layoutX="388.0" layoutY="99.0" prefWidth="150.0" />
+      <Label fx:id="lastNameError" layoutX="77.0" layoutY="133.0" prefHeight="17.0" prefWidth="92.0" textFill="RED" />
+      <Label fx:id="emailError" layoutX="77.0" layoutY="183.0" prefHeight="17.0" prefWidth="92.0" textFill="RED" />
+      <Label fx:id="genderError" layoutX="77.0" layoutY="233.0" prefHeight="17.0" prefWidth="92.0" textFill="RED" />
+      <Label fx:id="roleError" layoutX="413.0" layoutY="82.0" prefHeight="17.0" prefWidth="92.0" textFill="RED" />
+      <Label fx:id="passwordError" layoutX="387.0" layoutY="133.0" prefHeight="17.0" prefWidth="200.0" textFill="RED" />
+      <Label fx:id="confirmPasswordError" layoutX="418.0" layoutY="183.0" prefHeight="17.0" prefWidth="92.0" textFill="RED" />
+      <Label fx:id="successMessage" layoutX="258.0" layoutY="294.0" prefHeight="17.0" prefWidth="92.0" textFill="#33ff00" />
    </children>
 </AnchorPane>

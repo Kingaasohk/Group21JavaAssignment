@@ -15,6 +15,6 @@
       <PasswordField fx:id="passwordField" layoutX="226.0" layoutY="188.0" promptText="Enter your password" />
       <Button fx:id="loginButton" layoutX="275.0" layoutY="248.0" mnemonicParsing="false" onAction="#handleLogin" text="Login" />
       <Button fx:id="backButton" layoutX="14.0" layoutY="361.0" mnemonicParsing="false" onAction="#handleBackToGreeter" text="Back" />
-      <Label fx:id="errorMessage" layoutX="187.0" layoutY="214.0" prefHeight="32.0" prefWidth="228.0" text="Password  or E-mail incorrect, try again!" textFill="#ff0505" visible="false" />
+      <Label fx:id="errorMessage" layoutX="187.0" layoutY="214.0" prefHeight="32.0" prefWidth="228.0" textFill="#ff0505" />
    </children>
 </AnchorPane>

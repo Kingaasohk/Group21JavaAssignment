@@ -44,9 +44,26 @@ public class Database {
                     "created_at TEXT NOT NULL " + // Timestamp when account was created
                     ");";
 
-                try (Connection conn = connect();
-                PreparedStatement prepStat = conn.prepareStatement(usersTable)){
-                    prepStat.execute();
+            String perscriptionTable = "CREATE TABLE IF NOT EXISTS perscriptions (" +
+                    "id INTEGER PRIMARY KEY AUTOINCREMENT, " + // unique id, used for primary key
+                    "first_name TEXT NOT NULL," + // First Name
+                    "last_name TEXT NOT NULL," + // First Name
+                    "email TEXT NOT NULL UNIQUE, " +  // e-mail must be unique and not empty/null
+                    "gender TEXT NOT NULL," + // Gender
+                    "Medical condition TEXT NOT NULL, " + // Medical condition of the customer
+                    "created_at TEXT NOT NULL " + // Timestamp when account was created
+                    ");";
+
+            String inventoryTable = "CREATE TABLE IF NOT EXISTS inventory (" +
+                    "id INTEGER PRIMARY KEY AUTOINCREMENT, " + // unique id, used for primary key
+                    "drug_name TEXT NOT NULL," + // First Name
+                    "stock INTEGER NOT NULL" +
+                    ");";
+
+                try (Connection conn = connect()){
+                conn.prepareStatement(usersTable).execute();
+                conn.prepareStatement(perscriptionTable).execute();
+                conn.prepareStatement(inventoryTable).execute();
                     System.out.println("Table successfully made!");
                 } catch (SQLException e){
                     System.out.println("Error making the table 'cause of:" + e.getMessage());

@@ -1,14 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.pharmacyinventorysystem.AdminHomescreen"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pharmacyinventorysystem.AdminHomescreen">
+   <children>
+      <Label layoutX="208.0" layoutY="14.0" prefHeight="45.0" prefWidth="129.0" text="Admin panel">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="222.0" layoutY="51.0" prefHeight="27.0" prefWidth="97.0" text="Stock Addition">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
 </AnchorPane>

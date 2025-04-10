@@ -25,7 +25,8 @@ public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         primaryStage = stage; // Store the primary stage reference
-        switchScene("main-view.fxml"); // Load the main page first
+        switchScene("" +
+                "main-view.fxml"); // Load the main page first
         primaryStage.setTitle("Pharmacy Inventory Manager"); // Set the window title
         primaryStage.show(); // Display the window
     }
