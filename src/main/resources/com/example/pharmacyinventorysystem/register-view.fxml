@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pharmacyinventorysystem.RegisterView">
+   <children>
+      <Label layoutX="245.0" layoutY="28.0" prefHeight="42.0" prefWidth="168.0" text="Registration">
+         <font>
+            <Font size="31.0" />
+         </font></Label>
+      <TextField fx:id="firstNameField" layoutX="48.0" layoutY="99.0" promptText="Enter your first name" />
+      <ChoiceBox fx:id="genderChoiceBox" layoutX="48.0" layoutY="250.0" prefWidth="150.0" />
+      <Button layoutX="274.0" layoutY="269.0" mnemonicParsing="false" onAction="#handleRegister" text="Register" />
+      <Button fx:id="backButton" layoutX="18.0" layoutY="361.0" mnemonicParsing="false" onAction="#handleBackToGreeter" text="Back" />
+      <TextField fx:id="emailField" layoutX="48.0" layoutY="200.0" promptText="Enter your e-mail address" />
+      <TextField fx:id="lastNameField" layoutX="48.0" layoutY="150.0" promptText="Enter your last name" />
+      <PasswordField fx:id="passwordField" layoutX="389.0" layoutY="150.0" promptText="Enter your password" />
+      <PasswordField fx:id="confirmPasswordField" layoutX="389.0" layoutY="200.0" promptText="Re-type your password to confirm" />
+      <Label layoutX="77.0" layoutY="82.0" prefHeight="17.0" prefWidth="92.0" text="Label" />
+      <ChoiceBox fx:id="roleChoiceBox" layoutX="388.0" layoutY="99.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>

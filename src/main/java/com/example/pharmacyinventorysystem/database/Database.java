@@ -35,9 +35,13 @@ public class Database {
             // String that contains the SQL commands needed for a user table.
             String usersTable = "CREATE TABLE IF NOT EXISTS users (" +
                     "id INTEGER PRIMARY KEY AUTOINCREMENT, " + // unique id, used for primary key
-                    "username TEXT NOT NULL UNIQUE, " +  // Username must be unique and not empty/null
+                    "first_name TEXT NOT NULL," + // First Name
+                    "last_name TEXT NOT NULL," + // First Name
+                    "email TEXT NOT NULL UNIQUE, " +  // e-mail must be unique and not empty/null
+                    "gender TEXT NOT NULL," + // Gender
                     "password TEXT NOT NULL, " + // Password absolutely must not be null, can't hash something if it doesn't exist.
-                    "role TEXT NOT NULL" + // Role to determine levels of access, can't be null because you always have a role to play!
+                    "role TEXT DEFAULT 'Pharmacist'," + // Role to determine levels of access, can't be null because you always have a role to play!
+                    "created_at TEXT NOT NULL " + // Timestamp when account was created
                     ");";
 
                 try (Connection conn = connect();

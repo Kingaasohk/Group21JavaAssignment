@@ -7,7 +7,6 @@ import javafx.scene.control.TextField;
 import java.io.IOException;
 import com.example.pharmacyinventorysystem.database.Database;
 
-import javax.xml.transform.Result;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -44,11 +43,11 @@ public class LoginView {
     }
 
     // function to check data base records to run against user input.
-    private boolean isValidUser(String username, String password) {
-        String sql = "SELECT * FROM users WHERE username = ? AND password = ?";
+    private boolean isValidUser(String email, String password) {
+        String sql = "SELECT * FROM users WHERE email = ? AND password = ?";
         try( Connection conn = Database.connect();
               PreparedStatement pStatement = conn.prepareStatement(sql)) {
-            pStatement.setString(1, username);
+            pStatement.setString(1, email);
             pStatement.setString(2, password);
             ResultSet rs = pStatement.executeQuery();
              return rs.next();

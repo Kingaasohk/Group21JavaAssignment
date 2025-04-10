@@ -34,7 +34,8 @@ public class HelloController {
     }
 
     @FXML
-    public void registerButton() {
+    public void registerButton() throws IOException {
+        switchScene("register-view");
     }
 
     @FXML
