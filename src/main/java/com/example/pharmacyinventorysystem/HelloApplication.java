@@ -1,4 +1,4 @@
-package                com.example.pharmacyinventorysystem;
+package com.example.pharmacyinventorysystem;
 
 // Import necessary JavaFX classes
 import javafx.application.Application; // Base class for JavaFX applications
@@ -26,7 +26,7 @@ public class HelloApplication extends Application {
     public void start(Stage stage) throws IOException {
         primaryStage = stage; // Store the primary stage reference
         switchScene("main-view.fxml"); // Load the main page first
-        primaryStage.setTitle("Car Rental System"); // Set the window title
+        primaryStage.setTitle("Pharmacy Inventory Manager"); // Set the window title
         primaryStage.show(); // Display the window
     }
 

@@ -25,12 +25,12 @@ public class HelloController {
 
     @FXML
     public void handleUserLogin(ActionEvent event) throws IOException {
-        switchScene("login-view.fxml");
+        switchScene("user-login-view.fxml");
     }
 
     @FXML
     public void handleAdminLogin(ActionEvent event) throws IOException {
-
+        switchScene("admin-login-view.fxml");
     }
 
     @FXML
@@ -39,6 +39,7 @@ public class HelloController {
 
     @FXML
     public void handleRegister(ActionEvent event) throws IOException {
+        switchScene("register-view.fxml");
 
     }
 }

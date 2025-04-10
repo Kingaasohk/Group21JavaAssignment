@@ -1,8 +1,8 @@
 module com.example.pharmacyinventorysystem {
     requires javafx.controls;
     requires javafx.fxml;
-    requires java.sql;
     requires java.desktop;
+    requires org.xerial.sqlitejdbc;
 
 
     opens com.example.pharmacyinventorysystem to javafx.fxml;
