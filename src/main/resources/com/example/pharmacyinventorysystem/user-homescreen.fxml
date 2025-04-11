@@ -6,10 +6,25 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pharmacyinventorysystem.UserHomescreen">
    <children>
-      <Label layoutX="164.0" layoutY="25.0" prefHeight="60.0" prefWidth="273.0" text="Perscriptions">
+      <Label layoutX="164.0" layoutY="25.0" prefHeight="60.0" prefWidth="273.0" text="Precriptions">
          <font>
             <Font size="36.0" />
-         </font></Label>
+         </font>
+      </Label>
+
+      <TableView fx:id="prescriptionTable" layoutX="20.0" layoutY="95.0" prefHeight="240.0" prefWidth="560.0">
+         <columns>
+            <TableColumn fx:id="idCol" prefWidth="50" text="ID" />
+            <TableColumn fx:id="drugIdCol" prefWidth="60" text="Drug ID" />
+            <TableColumn fx:id="firstNameCol" prefWidth="90" text="First Name" />
+            <TableColumn fx:id="lastNameCol" prefWidth="90" text="Last Name" />
+            <TableColumn fx:id="emailCol" prefWidth="100" text="Email" />
+            <TableColumn fx:id="genderCol" prefWidth="60" text="Gender" />
+            <TableColumn fx:id="medicalConditionCol" prefWidth="120" text="Medical Condition" />
+            <TableColumn fx:id="createdAtCol" prefWidth="100" text="Created At" />
+         </columns>
+      </TableView>
+
       <Button fx:id="backButton" layoutX="20.0" layoutY="355.0" mnemonicParsing="false" onAction="#handleUserLogout" text="Logout" />
       <Button fx:id="addPerscriptionButton" layoutX="518.0" layoutY="355.0" mnemonicParsing="false" onAction="#handlePerscriptionAdd" text="Add Perscription" />
    </children>
