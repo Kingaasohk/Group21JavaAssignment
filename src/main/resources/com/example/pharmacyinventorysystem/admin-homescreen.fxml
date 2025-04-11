@@ -11,15 +11,36 @@
             <Font size="21.0" />
          </font>
       </Label>
-      <Label layoutX="222.0" layoutY="51.0" prefHeight="27.0" prefWidth="97.0" text="Stock Addition">
+      <Label layoutX="215.0" layoutY="52.0" prefHeight="27.0" prefWidth="97.0" text="Stock Addition">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
       <Button fx:id="backButton" layoutX="14.0" layoutY="361.0" mnemonicParsing="false" onAction="#handleBackToGreeter" text="Logout" />
       <Button fx:id="Add" layoutX="244.0" layoutY="280.0" mnemonicParsing="false" onAction="#handleStockAdd" text="Add" />
-      <TextField fx:id="drugName" layoutX="42.0" layoutY="96.0" promptText="Type in drug name" />
-      <TextArea fx:id="drugDescription" layoutX="22.0" layoutY="143.0" prefHeight="148.0" prefWidth="188.0" promptText="Describe the drug" />
+      <TextField fx:id="drugNameField" layoutX="42.0" layoutY="96.0" promptText="Type in drug name" />
+      <TextArea fx:id="drugDescriptionField" layoutX="22.0" layoutY="143.0" prefHeight="148.0" prefWidth="188.0" promptText="Describe the drug" />
       <TextField fx:id="amountField" layoutX="291.0" layoutY="96.0" promptText="How much is in stock?" />
+      <Label layoutX="207.0" layoutY="316.0" prefHeight="17.0" prefWidth="117.0" />
+      <Label fx:id="drugErrorMessage" layoutX="68.0" layoutY="66.0" prefHeight="27.0" prefWidth="97.0" textFill="RED">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
+      <Label fx:id="descriptionErrorMessage" layoutX="68.0" layoutY="121.0" prefHeight="27.0" prefWidth="97.0" textFill="RED">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
+      <Label fx:id="amountErrorMessage" layoutX="317.0" layoutY="66.0" prefHeight="27.0" prefWidth="97.0" textFill="RED">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
+      <Label fx:id="successMessage" layoutX="217.0" layoutY="253.0" prefHeight="27.0" prefWidth="97.0" textFill="#17d730">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

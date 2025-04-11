@@ -57,7 +57,9 @@ public class Database {
             String inventoryTable = "CREATE TABLE IF NOT EXISTS inventory (" +
                     "id INTEGER PRIMARY KEY AUTOINCREMENT, " + // unique id, used for primary key
                     "drug_name TEXT NOT NULL," + // First Name
-                    "stock INTEGER NOT NULL" +
+                    "description TEXT NOT NULL," +
+                    "stock INTEGER NOT NULL," +
+                    "created_at TEXT NOT NULL" +
                     ");";
 
                 try (Connection conn = connect()){
