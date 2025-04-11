@@ -6,10 +6,11 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pharmacyinventorysystem.UserHomescreen">
    <children>
-      <Label layoutX="164.0" layoutY="25.0" prefHeight="60.0" prefWidth="273.0" text="Welcome User!">
+      <Label layoutX="164.0" layoutY="25.0" prefHeight="60.0" prefWidth="273.0" text="Perscriptions">
          <font>
             <Font size="36.0" />
          </font></Label>
       <Button fx:id="backButton" layoutX="20.0" layoutY="355.0" mnemonicParsing="false" onAction="#handleUserLogout" text="Logout" />
+      <Button fx:id="addPerscriptionButton" layoutX="518.0" layoutY="355.0" mnemonicParsing="false" onAction="#handlePerscriptionAdd" text="Add Perscription" />
    </children>
 </AnchorPane>

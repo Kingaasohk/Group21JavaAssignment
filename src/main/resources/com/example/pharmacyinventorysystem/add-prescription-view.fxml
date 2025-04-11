@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pharmacyinventorysystem.AddPrescriptionView">
+   <children>
+      <Button fx:id="backButton" layoutX="11.0" layoutY="361.0" mnemonicParsing="false" onAction="#handleBackToMain" text="Back" />
+      <Button layoutX="274.0" layoutY="263.0" mnemonicParsing="false" onAction="#handleRegister" text="Add" />
+      <Label layoutX="126.0" layoutY="28.0" text="Perscription Registration">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Label>
+      <TextField fx:id="firstNameField" layoutX="41.0" layoutY="87.0" promptText="Type in First Name" />
+      <TextField fx:id="lastNameField" layoutX="41.0" layoutY="124.0" promptText="Type in Last Name" />
+      <TextArea fx:id="medicalCondition" layoutX="31.0" layoutY="203.0" prefHeight="146.0" prefWidth="191.0" promptText="Type in Medical Conditions" />
+      <ChoiceBox fx:id="genderChoiceBox" layoutX="404.0" layoutY="99.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="drugChoiceBox" layoutX="404.0" layoutY="188.0" prefWidth="150.0" />
+      <TextField fx:id="emailField" layoutX="41.0" layoutY="163.0" promptText="Type in e-mail" />
+      <Label fx:id="firstNameError" layoutX="69.0" layoutY="66.0" prefHeight="17.0" prefWidth="60.0" textFill="RED" />
+      <Label fx:id="lastNameError" layoutX="78.0" layoutY="108.0" prefHeight="17.0" prefWidth="60.0" textFill="RED" />
+      <Label fx:id="emailError" layoutX="78.0" layoutY="149.0" prefHeight="17.0" prefWidth="60.0" textFill="RED" />
+      <Label fx:id="successMessage" layoutX="263.0" layoutY="297.0" prefHeight="17.0" prefWidth="240.0" textFill="#46ee24" />
+      <Label fx:id="genderError" layoutX="442.0" layoutY="79.0" prefHeight="17.0" prefWidth="60.0" textFill="RED" />
+   </children>
+</AnchorPane>

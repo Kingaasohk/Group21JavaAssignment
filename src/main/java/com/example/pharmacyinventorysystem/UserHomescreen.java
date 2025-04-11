@@ -10,6 +10,11 @@ import static com.example.pharmacyinventorysystem.HelloApplication.switchScene;
 
 public class UserHomescreen {
 
+        @FXML
+        private void handlePerscriptionAdd() throws IOException {
+            switchScene("add-prescription-view.fxml");
+        }
+
 
         @FXML
         private void handleUserLogout() throws IOException {
